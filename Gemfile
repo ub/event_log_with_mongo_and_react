@@ -53,6 +53,7 @@ group :test do
 end
 gem 'mongoid', '~> 6.2.0'
 
+gem 'as-duration', require: false
 gem 'faker', require: false
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
