@@ -53,6 +53,8 @@ group :test do
 end
 gem 'mongoid', '~> 6.2.0'
 
+gem 'webpacker-react', "~> 0.3.1"
+
 gem 'as-duration', require: false
 gem 'faker', require: false
 
