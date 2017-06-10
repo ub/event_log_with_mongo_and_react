@@ -45,6 +45,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem 'slim'
 
 gem 'rspec-rails', :group => [:test, :development]
 gem 'mongoid-rspec', github: 'mongoid-rspec/mongoid-rspec', :group => [:test, :development]
