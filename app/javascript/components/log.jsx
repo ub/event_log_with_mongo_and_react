@@ -1,4 +1,5 @@
 import React from 'react';
+import LogEvent from 'components/log_event';
 
 export default class Log extends React.Component {
     constructor(props) {
@@ -9,9 +10,37 @@ export default class Log extends React.Component {
     render() {
         console.log("Log");
         console.log(this);
-        return <h2>
-            Log :
-        </h2>
+        return (
+        <div className="container mt-5">
+            <h2>
+                Log :
+            </h2>
+            <table className='table table-bordered'>
+                <thead>
+                <tr>
+                    <th>Хост</th>
+                    <th>Время</th>
+                    <th>Длительность</th>
+                    <th>Тип</th>
+                    <th>Сообщение</th>
+                </tr>
+                </thead>
+                <tbody>
+                {this.state.log_event_list.map((le) =>
+                    {
+                        console.log(le);
+                        console.log(le._id['$oid']);
+                    let duration = le.time_end - le.time_start;
+                    let time_start = (new Date(le.time_start * 1000)).toLocaleString('ru');
+                    return <LogEvent key={le._id['$oid']} host={le.host} result_type={le.result_type}
+                            task_type={le.task_type} time_start={time_start} duration={duration}
+                       result_message={le.result_message}/>;
+                })}
+
+                </tbody>
+            </table>
+        </div>
+                )
     }
 }
 
