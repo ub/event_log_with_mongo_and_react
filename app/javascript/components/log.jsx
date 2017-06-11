@@ -8,14 +8,42 @@ export default class Log extends React.Component {
         this.defaultProps = {log_event_list: []};
     }
 
+    handleTaskTypeFilterChange(ev) {
+        console.log(ev);
+        console.log(ev.target.value);
+        if(!ev.target.value) console.log("blank");
+
+        if(!ev.target.value) {
+            this.setState({task_filter: null});
+        } else {
+            this.setState({task_filter: ev.target.value});
+        }
+        console.log('state');
+        console.log(this.state.task_filter);
+
+    }
+    renderTaskTypeFilter() {
+        return (
+        <select className="custom-select" defaultValue={null} onChange={(e) => this.handleTaskTypeFilterChange(e)}>
+            <option value="" >Фильтр по типу задачи</option>
+            <option >task_1</option>
+            <option >task_2</option>
+            <option >task_3</option>
+            <option >task_4</option>
+            <option >task_5</option>
+        </select>
+            );
+    }
+
     render() {
-        console.log("Log");
         console.log(this);
         return (
             <div className="container mt-5">
                 <h2>
-                    Log :
+                    Журнал событий
                 </h2>
+                {this.renderTaskTypeFilter()}
+                <hr />
                 <table className='table table-bordered table-sm'>
                     <thead>
                     <tr>
