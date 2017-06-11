@@ -6,11 +6,11 @@ export default class LogEvent extends React.Component {
     }
     render() {
         //console.log(this.props);
-        // result_type == 'success|error'
+        let bg_class = this.props.result_type == 'error' ? 'bg-danger' : 'bg-success';
         return (
-        <tr>
+        <tr className={bg_class}>
             <td>{this.props.host}</td>
-            <td>{this.props.time_start}</td>
+            <td><small>{this.props.time_start}</small></td>
             <td>{this.props.duration}</td>
             <td>{this.props.task_type}</td>
             <td>{this.props.result_message}</td>

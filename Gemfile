@@ -59,5 +59,8 @@ gem 'webpacker-react', "~> 0.3.1"
 gem 'as-duration', require: false
 gem 'faker', require: false
 
+
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

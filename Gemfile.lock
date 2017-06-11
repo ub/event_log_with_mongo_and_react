@@ -13,6 +13,15 @@ GIT
       mongoid (~> 6.0)
       rspec (~> 3.3)
 
+GIT
+  remote: https://github.com/twbs/bootstrap-rubygem
+  revision: 7cdeca9a0e8db3bb7548d9fa5bdaad9b644fca32
+  specs:
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.9.9, < 2.0)
+      sass (>= 3.4.19)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -55,6 +64,8 @@ GEM
       tzinfo (~> 1.1)
     arel (8.0.0)
     as-duration (0.1.1)
+    autoprefixer-rails (7.1.1)
+      execjs
     bindex (0.5.0)
     bson (4.2.1)
     builder (3.2.3)
@@ -102,6 +113,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    popper_js (1.9.9)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -208,6 +220,7 @@ PLATFORMS
 
 DEPENDENCIES
   as-duration
+  bootstrap!
   byebug
   coffee-rails (~> 4.2)
   database_cleaner!

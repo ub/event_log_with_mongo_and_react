@@ -15,14 +15,14 @@ export default class Log extends React.Component {
             <h2>
                 Log :
             </h2>
-            <table className='table table-bordered'>
+            <table className='table table-bordered table-sm'>
                 <thead>
                 <tr>
-                    <th>Хост</th>
-                    <th>Время</th>
-                    <th>Длительность</th>
-                    <th>Тип</th>
-                    <th>Сообщение</th>
+                    <th className="w-10">Хост</th>
+                    <th className="w-20">Время</th>
+                    <th className="w-10">Длит.</th>
+                    <th className="w-10">Тип</th>
+                    <th className="w-50">Сообщение</th>
                 </tr>
                 </thead>
                 <tbody>
